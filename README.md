@@ -1,20 +1,25 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 💎 원석가공기 for 마스터링 (Raw Stone Processor)
 
-# Run and deploy your AI Studio app
+보컬이나 음원 원본 파일을 "원석"에서 "보석"으로 정교하게 다듬어주는 웹 기반 오디오 마스터링 도구입니다. 복잡한 DAW 설정 없이도 AI 기반의 스마트 분석과 직관적인 노드 컨트롤을 통해 전문적인 마스터링 결과물을 즉시 생성합니다.
 
-This contains everything you need to run your app locally.
+## ✨ 주요 기능
 
-View your app in AI Studio: https://ai.studio/apps/4aba9da5-8412-47a5-84fa-50361e98e863
+*   **스마트 프리-마스터 (Smart Pre-Master):** AI가 음원을 정밀 분석하여 타겟 라우드니스(-14 / -16 LUFS)에 맞춰 EQ와 다이내믹을 자동으로 최적화합니다.
+*   **실시간 듀얼 스펙트럼 분석:** 원본(Red)과 프로세싱된 음원(Blue)의 주파수 곡선을 실시간으로 비교하며 소리의 변화를 시각적으로 모니터링합니다.
+*   **지능형 치찰음(Sibilance) 제어:** AI가 100개 이상의 치찰음 노드를 자동 식별합니다. 사용자는 노드를 드래그하여 거친 'ㅅ', 'ㅊ' 발음을 정밀하게 타격 제거할 수 있습니다.
+*   **프로급 마스터링 체인:** 4밴드 정밀 EQ, 컴프레서, 하모닉 익사이터, 소프트 클리퍼 및 리미터가 탑재되어 전문가 수준의 음압과 음색을 구현합니다.
+*   **독립 모니터링 볼륨:** 처리 중인 음원의 게인(Gain)값에 영향을 주지 않고, 사용자 청취 볼륨만 안전하게 조절할 수 있는 전용 볼륨 조절바를 제공합니다.
 
-## Run Locally
+## 🚀 사용법
 
-**Prerequisites:**  Node.js
+1.  **파일 업로드:** 중앙의 업로드 영역을 클릭하거나 파일을 드래그하여 마스터링할 오디오를 불러옵니다.
+2.  **스마트 분석:** `SMART PRE-MASTER` 버튼을 눌러 AI가 추천하는 최적의 초기 파라미터(EQ, Comp)를 즉시 적용합니다.
+3.  **정밀 튜닝 (Advanced Settings):**
+    *   **EQ 조절:** 하단 스펙트로그램 위의 4개 노드를 드래그하여 저음, 중음, 고음의 질감을 다듬습니다.
+    *   **치찰음 제거:** 상단 파형에 생성된 파란색 노드를 상하(Gain) 또는 좌우(Width)로 드래그하여 특정 구간의 거친 소리를 직접 제거합니다.
+    *   **다이내믹 보정:** 왼쪽 패널의 컴프레서와 메이크업 게인 슬라이더를 조절하여 소리의 밀도와 크기를 최종 보정합니다.
+4.  **비교 청취:** 재생 중 `PROCESSED` 스위치를 조절하여 처리 전(Dry)과 처리 후(Wet)의 차이를 실시간으로 비교합니다.
+5.  **최종 내보내기:** 원하는 포맷(WAV / MP3 320kbps)을 선택한 후 `MASTER EXPORT` 버튼을 클릭하여 고음질 결과물을 다운로드합니다.
 
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+---
+*이 애플리케이션은 브라우저 기반의 실시간 오디오 엔진을 사용하여, 모든 프로세싱 과정이 끊김 없이 즉각적으로 반영됩니다.*
